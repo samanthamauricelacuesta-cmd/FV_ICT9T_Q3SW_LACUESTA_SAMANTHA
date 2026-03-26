@@ -1,105 +1,105 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Q4 SW1</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invader Zim Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Pixel Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1a1a1a; /* dark space background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            position: relative;
+        }
 
-	<style>
+        .login-card {
+            background-color: #b6fcb6; /* light green box */
+            padding: 30px;
+            border-radius: 15px;
+            width: 100%;
+            max-width: 400px;
+            color: #1a1a1a; /* dark text for contrast */
+        }
 
-		body{
-			background-color: skyblue;
-			background-image: url(https://i.pinimg.com/1200x/ba/81/0d/ba810dbf061358be2871a349782ece0f.jpg);
-			background-size: cover;
-			background-repeat: no-repeat;
-		}
-		
-		form{	
-			color: ;
-			font-size: 16px;
-		}
+        .login-card h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: 'Press Start 2P', cursive; /* pixel font */
+            font-size: 20px;
+        }
 
-		label{
-			font-family: ;
-			font-weight: bolder;
-			font-style: italic;
-		}
+        .login-card input {
+            background-color: #ffffff;
+            border: 1px solid #1a1a1a;
+            color: #1a1a1a;
+        }
 
-		input[type="submit"]{
-			color: white;
-			background-color: brown;
-			font-size: 20px;
-			border-radius: 10px;}
+        .login-card input::placeholder {
+            color: #555555;
+        }
 
-			input[type="submit"]:hover{
-			color: white;
-			background-color: brown;
-			font-size: 25px;
-			cursor: pointer;
-			border-radius: 15px;
+        .login-card .btn-info {
+            width: 100%;
+            background-color: #4caf50; /* green button */
+            border: none;
+            margin-top: 15px;
+        }
 
-		}
+        .login-card .btn-info:hover {
+            background-color: #45a049;
+        }
 
-		input[type="text"]{
-
-		width: 50%;
-		font-size:20px; 
-		color: brown;
-		border-radius: 10px;
-
-		}
-
-		input[type="email"]{
-
-		width: 50%;
-		font-size:20px; 
-		color: brown;
-		border-radius: 10px;}
-
-		#form-box{
-			background-color: #f2ebdf;
-			padding: 30px;
-			border-radius: 12px;
-			width: 500px;
-			margin: auto;
-			box-shadow: 0 4px 10px rgba(0, 0, 0, 0, 1);
-
-
-		}
-
-	</style>
-
+        /* GIR watermark */
+        .gir-watermark {
+            position: fixed;
+            bottom: 10px;
+            left: 10px;
+            width: 80px; /* adjust size */
+            opacity: 0.8; /* semi-transparent */
+            pointer-events: none; /* allows clicks to pass through */
+        }
+    </style>
 </head>
 <body>
+    <div class="login-card">
+        <h1>Login to the Alien World!</h1>
 
+        <h5>What's Alien Name???</h5>
+        <input type="text" class="form-control" id="ZimName" placeholder="Enter your alien name">
+        <br>
+        <h5>Insert Alien Code</h5>
+        <input type="password" class="form-control" id="GIRCode" placeholder="Blerpblerpblerp">
+        <br>
 
+        <button class="btn btn-info" onclick="CheckLogin()">Verify</button>
+    </div>
 
-<div id="form-box">
-	<form action="">
-        	<h2>LOG IN</h2>
+    <!-- GIR watermark -->
+    <img src="/mnt/data/8d8f230b-9f04-4808-90c8-f9783dc96a2c.png" alt="GIR" class="gir-watermark">
 
-		<label for="">Name</label>
-		<br>
-		
-		<input type="text" id="name1" name="name1" placeholder="Type here <3">
-		<br>
-		<label for="">Email</label>
-		<br>
-		
-		<input type="email" id="email1" name="email1" placeholder="Type email :P">
-		<br>
-		<br>
-		<label for="">Genre:</label>
-		<br>
-		<br>
-		<input type="checkbox" id="comedy" name="genre1">
-		<label for="">comedy</label>
-		<br>
-	
-		<br>
-		<input type="submit" id="submit" name="submit" value="submit form">
-	</form>
-</div>
+    <script>
+        function CheckLogin(){
+            let zimName = document.getElementById("ZimName").value;
+            let girCode = document.getElementById("GIRCode").value;
 
+            let zimUsername = "GREENGIR21";
+            let girPassword = "zimzimzim";
+
+            let doomMessage;
+
+            if(zimName === zimUsername && girCode === girPassword){
+                doomMessage = "Access Granted, Invader!";
+            } else {
+                doomMessage = "Access Denied, Human!";
+            }
+
+            alert(doomMessage);
+        }
+    </script>
 </body>
 </html>
