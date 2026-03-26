@@ -3,13 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invader Zim Login</title>
+    <title>ICT Q4 SW1</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Pixel Font -->
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #1a1a1a; /* dark space background */
+            background-color: #000000; 
             display: flex;
             justify-content: center;
             align-items: center;
@@ -18,18 +17,18 @@
         }
 
         .login-card {
-            background-color: #b6fcb6; /* light green box */
+            background-color: #b6fcb6; 
             padding: 30px;
             border-radius: 15px;
             width: 100%;
             max-width: 400px;
-            color: #1a1a1a; /* dark text for contrast */
+            color: #1a1a1a; 
         }
 
         .login-card h1 {
             text-align: center;
             margin-bottom: 20px;
-            font-family: 'Press Start 2P', cursive; /* pixel font */
+            font-family: 'Press Start 2P', cursive; 
             font-size: 20px;
         }
 
@@ -45,7 +44,7 @@
 
         .login-card .btn-info {
             width: 100%;
-            background-color: #4caf50; /* green button */
+            background-color: #4caf50; 
             border: none;
             margin-top: 15px;
         }
@@ -54,14 +53,32 @@
             background-color: #45a049;
         }
 
-        /* GIR watermark */
         .gir-watermark {
             position: fixed;
             bottom: 10px;
             left: 10px;
-            width: 80px; /* adjust size */
-            opacity: 0.8; /* semi-transparent */
-            pointer-events: none; /* allows clicks to pass through */
+            width: 80px; 
+            opacity: 0.8; 
+            pointer-events: none; 
+        }
+
+      
+        .image-credit {
+            position: fixed;
+            top: 10px;  
+            left: 10px;
+            font-size: 6px; 
+            color: #39ff14; 
+            font-family: 'Press Start 2P', cursive;
+        }
+
+        .image-credit a {
+            color: #39ff14;
+            text-decoration: none;
+        }
+
+        .image-credit a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -79,21 +96,25 @@
         <button class="btn btn-info" onclick="CheckLogin()">Verify</button>
     </div>
 
-    <!-- GIR watermark -->
-    <img src="/mnt/data/8d8f230b-9f04-4808-90c8-f9783dc96a2c.png" alt="GIR" class="gir-watermark">
+    <img src="https://i.pinimg.com/736x/38/5e/89/385e899c8230eb1907f7c461018859da.jpg" alt="GIR" class="gir-watermark">
+
+    <div class="image-credit">
+        Image used: <a href="https://i.pinimg.com/736x/38/5e/89/385e899c8230eb1907f7c461018859da.jpg" target="_blank">
+        https://i.pinimg.com/736x/38/5e/89/385e899c8230eb1907f7c461018859da.jpg</a>
+    </div>
 
     <script>
         function CheckLogin(){
             let zimName = document.getElementById("ZimName").value;
             let girCode = document.getElementById("GIRCode").value;
 
-            let zimUsername = "GREENGIR21";
+            let zimUsername = "SECRETALIENSPY21";
             let girPassword = "zimzimzim";
 
             let doomMessage;
 
             if(zimName === zimUsername && girCode === girPassword){
-                doomMessage = "Access Granted, Invader!";
+                doomMessage = "Welcome to the alien world <3";
             } else {
                 doomMessage = "Access Denied, Human!";
             }
